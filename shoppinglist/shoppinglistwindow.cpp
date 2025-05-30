@@ -33,3 +33,13 @@ void ShoppingListWindow::on_pushButtonAdd_clicked()
 
     ui->listWidgetProducts->addItem(item);
 }
+
+void ShoppingListWindow::on_pushButtonDelete_clicked()
+{
+    for (int i = ui->listWidgetProducts->count() - 1; i >= 0; --i) {Add commentMore actions
+            QListWidgetItem* item = ui->listWidgetProducts->item(i);
+        if (item->checkState() == Qt::Checked) {
+            delete ui->listWidgetProducts->takeItem(i);
+        }
+    }
+}
