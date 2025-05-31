@@ -9,7 +9,7 @@ class StoreWindow;
 
 class StoreWindow : public QMainWindow
 {
-        Q_OBJECT
+    Q_OBJECT
 
 public:
     explicit StoreWindow(QWidget *parent = nullptr);
