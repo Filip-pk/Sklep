@@ -9,7 +9,7 @@ class StoreWindow;
 
 class StoreWindow : public QMainWindow
 {
-        Q_OBJECT
+    Q_OBJECT
 
 public:
     explicit StoreWindow(QWidget *parent = nullptr);
@@ -17,6 +17,10 @@ public:
 
 private:
     Ui::StoreWindow *ui;
+
+private slots:
+    void on_pushButtonAddToCart_clicked();
+    void handleZaplac(const QStringList& produkty, double suma);
 };
 
 #endif // STOREWINDOW_H
